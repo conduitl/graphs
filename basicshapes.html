@@ -4,15 +4,52 @@
   <meta charset="utf-8"/>
   <title>Basic SVG Shapes</title>
   <style type="text/css">
-    #circ1 {
+    #circ1, #rect1 {
         height: 128px;
+    }
+    #rect2 {
+        fill: #0000ff;
+    }
+    #rect3 {
+        fill: #00cc00;
+    }
+    #line1 {
+        stroke: #006600;
+    }
+    #rect4 {
+        stroke: #006600;
+        fill: #006600;
+    }
+    #text1 {
+        fill: #660000;
     }
   </style>
 </head>
 <body>
     <h2>Rectangle</h2>
-    <img src="rect.svg">
+    <img id="rect1" src="rect.svg">
     <h2>Circle</h2>
     <img id="circ1" src="circle.svg">
+    <h2>Nested SVG Elements</h2>
+    <div>
+        <svg>
+            <svg x="10">
+                <rect id="rect2" x="10" y="10" height="100" width="100" />
+            </svg>
+            <svg x="200">
+                <rect id="rect3" x="10" y="10" height="100" width="100" />
+            </svg>
+        </svg>
+    </div>
+    <h2>G Element</h2>
+    <div>
+        <svg>
+            <g>
+                <line id="line1" x1="10" y1="10" x2="85" y2="10" />
+                <rect id="rect4" x="10" y="20" height="50" width="75" />
+                <text id="text1" x="10" y="90">Text grouped with shapes</text>
+            </g>
+        </svg>
+    </div>
 </body>
 </html>
