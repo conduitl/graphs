@@ -48,9 +48,24 @@
         stroke: #009900;
         fill: #33ff33;
     }
+    .stk-green {
+        stroke: #006600;
+        stroke-width: 2;
+    }
     .blue {
         stroke: #000099;
         fill: #3333ff;
+    }
+    .stk-blue {
+        stroke: #000066;
+        stroke-width: 2;
+    }
+    .red {
+        stroke: #660000;
+        fill: #cc0000;
+    }
+    .stk-red {
+        stroke: #660000;
     }
     .opac50 {
         fill-opacity: 0.5;
@@ -115,6 +130,79 @@
         <svg>
             <rect class="green" x="20" y="20" width="100" height="100" />
             <rect class="blue opac50"  x="50" y="50" width="100" height="100" />
+        </svg>
+    </div>
+    <h2>Circles: A Venn Diagram</h2>
+    <div>
+        <svg>
+            <circle class="red opac50"  cx="40" cy="40" r="24" />
+            <circle class="blue opac50" cx="64" cy="40" r="24" />
+            <circle class="green opac50" cx="52" cy="64" r="24"/>
+        </svg>
+    </div>
+    <h2>Ellipses</h2>
+    <div>
+        <svg>
+            <ellipse class="green opac50" cx="100" cy="60" rx="50" ry="30" />
+        </svg>
+    </div>
+    <h2>Lines</h2>
+    <div>
+        <svg>
+            <line class="green" x1="0" y1="10" x2="0" y2="100" />
+            <line class="green" x1="10" y1="10" x2="100" y2="100" />
+            <line class="blue" x1="20" y1="10" x2="100" y2="50" />
+            <line class="red" x1="30" y1="10" x2="110" y2="10" /> 
+        </svg>
+    </div>
+    <h2>Polyline</h2>
+    <div>
+        <svg>
+            <polyline class="green" points="10,2 60,2 35,52 10,2" />
+        </svg>
+    </div>
+    <h2>Polygons</h2>
+    <div>
+        <svg>
+            <polygon class="red" points="50,5 100,5 125,30, 125,80 100,105 50,105 25,80 25,30" />
+        </svg>
+    </div>
+    <h2>Paths: Lines</h2>
+    <div>
+        <svg>
+            <path class="stk-green"
+                  d="M50,50
+                     L100,100" />
+            <path class="stk-green empty"
+                  d="M100,50
+                     L150,100
+                     L175,50" />
+        </svg>
+    </div>
+    <h2>Paths: Arcs</h2>
+    <div>
+        <svg>
+            <path class="stk-green empty"
+                  d="M50,50
+                     A30,50 0 0,1 100,100" />
+            <path class="stk-blue empty"
+                  d="M50,50
+                     A30,150 0 0,1 100,100" />
+            <path class="stk-red empty"
+                  d="M50,50
+                     A50,50, 0 0,1 100,100" />
+        </svg>
+    </div>
+    <div>
+        <svg>
+            <path d="M40,20 A30,30 0 0,0 70,70"
+                  style="stroke: #cccc00; stroke-width:2; fill:none;" />
+            <path d="M40,20 A30,30 0 1,0 70,70"
+                  style="stroke: #ff0000; stroke-width:2; fill:none;" />
+            <path d="M40,20 A30,30 0 1,1 70,70"
+                  style="stroke: #00ff00; stroke-width:2; fill:none;" />
+            <path d="M40,20 A30,30 0 0,1 70,70"
+                  style="stroke: #0000ff; stroke-width:2; fill:none;" />
         </svg>
     </div>
 </body>
