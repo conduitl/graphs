@@ -1,0 +1,36 @@
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+.t-chart-panel {
+    background-color: red !important;
+    text-align: center;
+}
+.svg {
+    fill: white;
+    height: 240px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+    .t-chart-panel {
+        background-color: black !important;
+    }
+    .svg {
+        height: 360px;
+    }
+ }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .t-chart-panel {
+        background-color: blue !important;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .t-chart-panel {
+        background-color: green !important;
+    }
+    .svg {
+        height: 480px;
+    }
+}
